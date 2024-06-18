@@ -1,5 +1,4 @@
 const dataSection = document.getElementById("data-section")
-const categoryList = document.getElementById("category-list")
 const category = document.getElementById("category")
 let jsonData = []
 
@@ -19,7 +18,7 @@ function processData() {
       console.log(`Category: ${item.category}, Score: ${item.score}, Icon: ${item.icon}`);
       dataSection.innerHTML += 
                     `
-                    <ul class = "category-list" id = "category-list">
+                    <ul class = "category-list">
                         <li class = "display category"><span class = "icon"><img src = ${item.icon} /></span class = "category" id = "category"> ${item.category} </li>
                         <li><span class = "score">${item.score} </span>  <span class = "out-of-hundred" > / 100</span></li>
                     </ul>
