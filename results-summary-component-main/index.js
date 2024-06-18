@@ -8,7 +8,6 @@ async function getData(){
         const response = await fetch("./data.json")
         const data = await response.json()
         jsonData = data
-        console.log("data fetched successfully", jsonData)
         processData();
     }
     catch(error) {
@@ -16,7 +15,6 @@ async function getData(){
 }
 }
 function processData() {
-    // Now jsonData is available here
     jsonData.forEach(item => {
       console.log(`Category: ${item.category}, Score: ${item.score}, Icon: ${item.icon}`);
       dataSection.innerHTML += 
